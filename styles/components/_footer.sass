@@ -1,0 +1,16 @@
+@import '../abstract/_variaveis.scss'
+
+@mixin bg-colors($lado, $colors...)
+    @if $lado == left
+        background: linear-gradient(to left, $colors)
+    @else
+        background: linear-gradient(to right, $colors)
+
+footer
+    text-align: center
+    font-size: $tamanho-do-texto / 2
+    border-top: $cor-primaria
+    padding: 1.2 rem
+    @include bg-colors(left, $cor-primaria, $cor-secundaria, $cor-terciaria)
+    i
+        color: red
